@@ -1,0 +1,260 @@
+*,::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    width: 100%;
+    padding: 25px;
+}
+
+h3 + div{
+    width: fit-content;
+    margin: 40px auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* ================== EXO 1 ================== */
+
+.exo1 input{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.exo1 p{
+    margin-top: 10px;
+}
+
+
+/* ================== EXO 2 ================== */
+
+
+.exo2{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exo2 > button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: 1px 1px 20px 0px black;
+    cursor: pointer;
+}
+
+/* ================== EXO 3 ================== */
+
+
+.exo3 ul {
+    list-style: none;
+}
+
+.exo3 ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.exo3 ul li h5{
+    color: darkorchid;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.exo3 ul li p{
+    color: grey;
+}
+
+/* ================== EXO 4 ================== */
+
+
+.exo4 .accordion{
+    max-width: 550px;
+    width: 80vw;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0px 0px 5px 0px black;
+}
+
+.exo4 .accordion .accordion-title{
+    background: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.exo4 .accordion .accordion-title button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transform: rotateZ(-181deg);
+    transition: transform .3s ease;
+}
+
+.exo4 .accordion.show .accordion-title button{
+    transform: rotateZ(-91deg);
+    transition: transform .3s ease;
+}
+
+.exo4 .accordion .accordion-body{
+    padding: 25px;
+    word-break: normal;
+    text-align: start;
+}
+
+/* ================== EXO 5 ================== */
+
+.exo5{
+    position: relative;
+    width: 600px;
+    max-width: 90vw;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 25px;
+    font-family: sans-serif;
+}
+
+.exo5 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    transform: translate(0, 0);
+    transition: transform .5s ease;
+    object-fit: cover;
+}
+
+.exo5 img.img-current{
+    transform: translate(0, 0);
+    transition: transform .5s ease;
+    z-index: -9;
+}
+
+.exo5 img.img-previous{
+    transform: translate(-100%, 0);
+    transition: transform .5s ease;
+}
+
+.exo5 img.img-next{
+    transform: translate(100%, 0);
+    transition: transform .5s ease;
+}
+
+.exo5 .play{
+    font-size: 1rem;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.exo5 .prev, .exo5 .next{
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    background: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.exo5 .prev:hover, .exo5 .next:hover{
+    background: rgb(204, 204, 204);
+}
+
+.exo5 .prev{
+    left: 20px;
+    transform: translate(50%, -50%);
+}
+
+.exo5 .next{
+    right: 20px;
+    transform: translate(-50%, -50%);
+}
+
+.exo5 .slideSelecter{
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, 50%);
+}
+
+.exo5 .slideSelecter-elt{
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+    margin: 0 2px;
+}
+
+.exo5 .slideSelecter-elt.show::after{
+    content: '';
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ================== EXO 6 ================== */
+
+.exo6{
+    text-align: start;
+}
+
+/* ================== EXO 7 ================== */
+
+.exo7 form{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.exo7 div{
+    margin-bottom: 20px;
+    /* width: 300px;
+    display: flex;
+    justify-content: space-between; */
+}
+
+.exo7 div label{
+    margin-right: 10px;
+}
+
+.exo7 button{
+    align-self: center;
+}
